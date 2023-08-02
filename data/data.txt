@@ -1,0 +1,10 @@
+Data extracted directly from "https://www.tensorflow.org/datasets/catalog/cycle_gan"
+
+This can be directly loaded in the program by executing the below code. This code is used in both in training and evaluation code.
+
+import tensorflow_datasets as tfds
+dataset, metadata = tfds.load('cycle_gan/horse2zebra',
+                              with_info=True, as_supervised=True)
+
+train_horses, train_zebras = dataset['trainA'], dataset['trainB']
+test_horses, test_zebras = dataset['testA'], dataset['testB']
